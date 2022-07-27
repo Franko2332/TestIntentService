@@ -7,11 +7,11 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         val intent = Intent().apply {
             setAction("ru.gb.thegithubclient.service.CustomIntentService")
             setPackage("ru.gb.thegithubclient")
         }
-            startService(intent)
+        setContentView(R.layout.activity_main)
+        startService(intent)
         }
     }
